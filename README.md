@@ -2,10 +2,10 @@
 Analysis of customer loyalty report of Interconnect Telecom company_ Sprint 17 looking at the churn customer data
 
 
-Conclusion
+## Conclusion
 This analysis successfully leveraged data science techniques to reveal critical insights into customer retention and churn prediction for Interconnect Telecom. The primary objective was to classify customers based on their churn status (indicated by the presence or absence of an ‘end date’) using the df['enddate'] variable as the target. The project followed a predefined work plan, encompassing data download, exploration, preprocessing, exploratory data analysis (EDA), feature engineering, scaling, balancing, model building, hyperparameter tuning, model selection, and final testing.
 
-Methodology and Key Findings:
+## Methodology and Key Findings:
 The process began by downloading and exploring the raw data, noting that different CSV files had varying numbers of rows. This initial exploration identified the need for comprehensive preprocessing.
 Data Preprocessing and Feature Engineering:
 Data from various data frames was merged into a single data frame. The personal data frame contained most data, but others like phone and contract were missing over 2000 rows. Missing values were addressed primarily using Simple Imputer, which replaced absent entries with the most frequent values in each column. Missing values in the 'total charges' column were specifically handled by filling them with 0. This step was crucial for completing the dataset, stabilizing predictions, and reducing variability. Column names were converted to lowercase to avoid retrieval errors. Data types were adjusted; specifically, 'total charges' were converted to float, and 'begin date' was converted to datetime. A feature correlation analysis was conducted, including a heatmap, to understand variable relationships.
@@ -16,7 +16,7 @@ Data from various data frames was merged into a single data frame. The personal 
 •	EDA also revealed that there are fewer senior citizens compared to non-senior citizens in the dataset.
 Data Preparation for Modeling:
 Categorical variables were transformed using One-Hot Encoding. This included columns like enddate, type, paperlessbilling, paymentmethod, gender, seniorcitizen, partner, dependents, multiplelines, internetservice, onlinesecurity, onlinebackup, deviceprotection, techsupport, streamingtv, and streamingmovies. Numeric columns such as monthly charges and total charges were scaled using Standard Scaler. This ensured equal contribution from these features, enhancing prediction precision and consistency. The dataset exhibited class imbalance, with 73% of customers still with the company (loyal) and 27% having churned. SMOTE was applied to the training data to address this imbalance by introducing synthetic data points for the minority class, enhancing model fairness and robustness.
-Model Development and Selection:
+## Model Development and Selection:
 The dataset was split into training, validation, and testing sets.  Logistic Regression served as the base model. Tested on the validation set, it yielded an AUC-ROC of 80% and an Accuracy of 72%. Hyper parameter tuning using grid search with cross-validation was performed on several advanced models: Random Forest Classifier, Decision Tree Classifier, XGB Classifier, and Light GBM Classifier. 
 Performance on the validation set was compared:
 •	Decision Tree Classifier: AUC-ROC 85%, Accuracy 76%.
