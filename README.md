@@ -4,13 +4,13 @@
 # 📌 Project Overview
 ### The primary objective of this project was to classify customers based on their churn status using the enddate field as the target variable. The analysis followed a structured workflow:
 
- 1.Data Acquisition & Exploration
- 2.Data Cleaning & Preprocessing
- 3.Exploratory Data Analysis (EDA)
- 4.Feature Engineering & Transformation
- 5.Model Building & Evaluation
- 6.Hyperparameter Tuning
- 7.Final Model Testing & Recommendations
+ * 1.Data Acquisition & Exploration
+ * 2.Data Cleaning & Preprocessing
+ * 3.Exploratory Data Analysis (EDA)
+ * 4.Feature Engineering & Transformation
+ * 5.Model Building & Evaluation
+ * 6.Hyperparameter Tuning
+ * 7.Final Model Testing & Recommendations
 ## 🧠 Methodology & Key Findings
 * Data Preprocessing & Feature Engineering
 * Merged multiple CSV files into a unified dataset.
